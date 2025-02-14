@@ -1,31 +1,16 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QLabel
 
-class MyWindow(QWidget):
-    def __init__(self):
-        super().__init__()
+from PyQt5.QtWidgets import QApplication
 
-        self.setWindowTitle('PyQt5 Example')
-        self.setGeometry(100, 100, 300, 200)
+from gui import MyWindow
 
-        self.layout = QVBoxLayout()
-
-        self.label = QLabel('Hello, PyQt!', self)
-        self.layout.addWidget(self.label)
-
-        self.button = QPushButton('Click me', self)
-        self.button.clicked.connect(self.on_button_click)
-        self.layout.addWidget(self.button)
-
-        self.setLayout(self.layout)
-
-    def on_button_click(self):
-        self.label.setText('Button clicked!')
-
-if __name__ == '__main__':
+def main():
     app = QApplication(sys.argv)
 
     window = MyWindow()
     window.show()
 
     sys.exit(app.exec_())
+
+if __name__ == '__main__':
+    main()
