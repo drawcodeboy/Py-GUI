@@ -5,7 +5,7 @@ class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle('PyQt5 Example')
+        self.setWindowTitle('Doby Test')
         self.setGeometry(100, 100, 300, 200)
 
         self.layout = QVBoxLayout()
